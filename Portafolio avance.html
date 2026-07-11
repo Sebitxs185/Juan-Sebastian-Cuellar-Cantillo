@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Juan Sebastián Cuellar | Portafolio</title>
+
+<!-- ICONOS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+/*==========================
+RESET
+==========================*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#080808;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+
+/*==========================
+NAVBAR
+==========================*/
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:#111;
+
+border-bottom:2px solid #00ff88;
+
+z-index:999;
+
+}
+
+nav{
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 40px;
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#00ff88;
+
+}
+
+.menu{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+.menu a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#00ff88;
+
+}
+
+.menu-toggle{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+
+/*==========================
+INICIO
+==========================*/
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 10%;
+
+gap:50px;
+
+}
+
+.hero-text{
+
+max-width:600px;
+
+}
+
+.hero-text h3{
+
+font-size:22px;
+
+color:#00d9ff;
+
+margin-bottom:10px;
+
+}
+
+.hero-text h1{
+
+font-size:65px;
+
+margin-bottom:15px;
+
+color:#00ff88;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+line-height:1.7;
+
+margin-bottom:35px;
+
+}
+
+.botones{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+background:#00ff88;
+
+padding:15px 28px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+color:black;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+background:#00d9ff;
+
+}
+
+.hero img{
+
+width:360px;
+
+height:360px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid #00ff88;
+
+box-shadow:0 0 30px #00ff88;
+
+}
+
+
+/*==========================
+SECCIONES
+==========================*/
+
+section{
+
+padding:100px 10%;
+
+}
+
+.titulo{
+
+font-size:42px;
+
+color:#00d9ff;
+
+margin-bottom:40px;
+
+position:relative;
+
+}
+
+.titulo::after{
+
+content:"";
+
+display:block;
+
+width:90px;
+
+height:4px;
+
+background:#00ff88;
+
+margin-top:12px;
+
+}
+
+
+/*==========================
+TARJETAS
+==========================*/
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:#151515;
+
+padding:30px;
+
+border-radius:15px;
+
+border:1px solid #00ff88;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 20px #00ff88;
+
+}
+
+
+/*==========================
+BARRAS
+==========================*/
+
+.skill{
+
+margin-bottom:25px;
+
+}
+
+.skill span{
+
+display:block;
+
+margin-bottom:10px;
+
+}
+
+.barra{
+
+width:100%;
+
+height:12px;
+
+background:#222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.progreso{
+
+height:100%;
+
+background:#00ff88;
+
+}
+
+
+/*==========================
+REDES
+==========================*/
+
+.social{
+
+text-align:center;
+
+}
+
+.social a{
+
+font-size:34px;
+
+color:white;
+
+margin:15px;
+
+transition:.3s;
+
+}
+
+.social a:hover{
+
+color:#00ff88;
+
+}
+
+
+/*==========================
+FOOTER
+==========================*/
+
+footer{
+
+background:#111;
+
+text-align:center;
+
+padding:30px;
+
+margin-top:60px;
+
+}
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+.menu{
+
+display:none;
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+background:#111;
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+.menu.active{
+
+display:flex;
+
+}
+
+.menu-toggle{
+
+display:block;
+
+}
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding-top:160px;
+
+}
+
+.hero img{
+
+width:230px;
+
+height:230px;
+
+}
+
+.hero-text h1{
+
+font-size:45px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+}
+
+.botones{
+
+justify-content:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+Juan Cuellar
+
+</div>
+
+<div class="menu-toggle" id="menu-toggle">
+
+☰
+
+</div>
+
+<ul class="menu" id="menu">
+
+<li><a href="#inicio">Inicio</a></li>
+
+<li><a href="#perfil">Perfil</a></li>
+
+<li><a href="#habilidades">Habilidades</a></li>
+
+<li><a href="#proyectos">Proyectos</a></li>
+
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<section id="inicio" class="hero">
+
+<div class="hero-text">
+
+<h3>¡Hola! Soy</h3>
+
+<h1>Juan Sebastián Cuellar</h1>
+
+<p>
+
+Tecnólogo | Diseñador Gráfico | Fotógrafo | Desarrollador Web
+
+</p>
+
+<div class="botones">
+
+<a href="#contacto" class="btn">
+
+Contáctame
+
+</a>
+
+
+</div>
+
+</div>
+
+<img src="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/imagen_2026-07-11_012246253.png" alt="Foto">
+
+</section>
+
+<!-- ==========================
+PERFIL
+========================== -->
+
+<section id="perfil">
+
+    <h2 class="titulo">Sobre mí</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>¿Quién soy?</h3>
+
+            <p>
+                Soy Juan Sebastián Cuellar, apasionado por el diseño gráfico,
+                la fotografía y el desarrollo web. Me gusta crear proyectos
+                modernos, funcionales y visualmente atractivos.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Objetivo Profesional</h3>
+
+            <p>
+                Seguir creciendo profesionalmente, adquiriendo nuevos conocimientos
+                y aportando soluciones creativas mediante el diseño y la tecnología.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+HABILIDADES
+========================== -->
+
+<section id="habilidades">
+
+    <h2 class="titulo">Habilidades</h2>
+
+    <div class="skill">
+
+        <span>HTML 5</span>
+
+        <div class="barra">
+            <div class="progreso" style="width:95%;"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <span>CSS 3</span>
+
+        <div class="barra">
+            <div class="progreso" style="width:90%;"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <span>Adobe Photoshop</span>
+
+        <div class="barra">
+            <div class="progreso" style="width:85%;"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <span>Adobe Illustrator</span>
+
+        <div class="barra">
+            <div class="progreso" style="width:80%;"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <span>Fotografía</span>
+
+        <div class="barra">
+            <div class="progreso" style="width:88%;"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+EXPERIENCIA
+========================== -->
+
+<section id="experiencia">
+
+<h2 class="titulo">
+
+Experiencia
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+Analista Administrativo
+
+</h3>
+
+<p>
+
+• Manejo de SAP.
+
+</p>
+
+<p>
+
+• Elaboración de informes estadísticos.
+
+</p>
+
+<p>
+
+• Seguimiento de tareas.
+
+</p>
+
+<p>
+
+• Atención a proveedores y clientes internos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Conocimientos
+
+</h3>
+
+<p>
+
+✔ HTML
+
+</p>
+
+<p>
+
+✔ CSS
+
+</p>
+
+<p>
+
+✔ Edición de video
+
+</p>
+
+<p>
+
+✔ Diseño gráfico
+
+</p>
+
+<p>
+
+✔ Fotografía
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================
+PROYECTOS
+========================== -->
+
+<section id="proyectos">
+
+<h2 class="titulo">
+
+Proyectos
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+Portafolio Web
+
+</h3>
+
+<p>
+
+Sitio web desarrollado con HTML y CSS totalmente responsive.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Diseño Publicitario
+
+</h3>
+
+<p>
+
+Creación de piezas gráficas para redes sociales y publicidad.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Fotografía
+
+</h3>
+
+<p>
+
+Edición y producción de contenido fotográfico profesional.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+CONTACTO
+========================== -->
+
+<section id="contacto">
+
+    <h2 class="titulo">Contáctame</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>¡Trabajemos juntos!</h3>
+
+            <p>
+                Si te interesan mis diseños, proyectos o servicios,
+                puedes comunicarte conmigo mediante cualquiera de
+                las siguientes redes sociales.
+            </p>
+
+            <br>
+
+            <div class="social">
+
+                <!-- GitHub -->
+                <a href="https://github.com/Sebitxs185/Juan-Sebastian-Cuellar-Cantillo" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/sebitas.185/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://w.app/7elogc" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <!-- Correo -->
+                <a href="mailto:cuellaroscar321@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+            <br>
+
+            <a href="file:///C:/Users/Sebitxs/Downloads/CV_Juan_Cuellar.pdf.pdf" target="_blank" class="btn" download>
+                <i class="fa-solid fa-eye"></i>
+                Ver hoja de vida!
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+<footer>
+
+    <h3>Juan Sebastián Cuellar</h3>
+
+    <br>
+
+    <p>
+        Tecnólogo | Diseñador Gráfico | Fotógrafo | Desarrollador Web
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<!-- ==========================
+JAVASCRIPT
+========================== -->
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+
+    menu.classList.toggle("active");
+
+});
+
+// Cerrar el menú al pulsar un enlace en móvil
+document.querySelectorAll(".menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menu.classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
