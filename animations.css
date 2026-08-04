@@ -1,0 +1,437 @@
+/*==================================================
+                ANIMATIONS
+==================================================*/
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
+
+    will-change:
+
+        transform,
+
+        opacity;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* Floating */
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Glow */
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(255,214,10,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 35px rgba(255,214,10,.25);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(255,214,10,0);
+
+    }
+
+}
+
+
+/* Fade Left */
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* Fade Right */
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==================================================
+                GRID MOVE
+==================================================*/
+
+@keyframes gridMove{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:50px 50px;
+
+    }
+
+}
+
+/*==================================================
+                BLOB MOVE
+==================================================*/
+
+@keyframes blobMove{
+
+    0%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translate(60px,-40px) scale(1.08);
+
+    }
+
+    100%{
+
+        transform:translate(-30px,40px) scale(.95);
+
+    }
+
+}
+
+/*==================================================
+        ORBE EXTRA (fondo dinámico)
+==================================================*/
+
+@keyframes orbFloat3{
+
+    0%,100%{ transform:translate(0,0) scale(1); }
+
+    50%{ transform:translate(-90px,50px) scale(1.15); }
+
+}
+
+.blur-3{
+
+    position:fixed;
+
+    width:340px;
+
+    height:340px;
+
+    top:40%;
+
+    left:52%;
+
+    border-radius:50%;
+
+    filter:blur(160px);
+
+    opacity:.14;
+
+    background:#FFB800;
+
+    z-index:-2;
+
+    animation:orbFloat3 22s ease-in-out infinite;
+
+    will-change:transform;
+
+}
+
+/*==================================================
+        ESTRELLAS DE FONDO (canvas)
+==================================================*/
+
+.stars-canvas{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+/*==================================================
+        BARRA DE PROGRESO DE SCROLL
+==================================================*/
+
+.scroll-progress{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    height:3px;
+
+    width:0%;
+
+    background:linear-gradient(90deg,var(--primary),#FFB800,var(--primary));
+
+    background-size:200% 100%;
+
+    box-shadow:0 0 16px rgba(255,214,10,.85),0 0 4px rgba(255,184,0,.9);
+
+    z-index:2100;
+
+    transition:width .12s ease-out;
+
+    animation:progressShimmer 4s linear infinite;
+
+}
+
+@keyframes progressShimmer{
+
+    0%{ background-position:0% 0; }
+
+    100%{ background-position:200% 0; }
+
+}
+
+/*==================================================
+        RASTRO DE CURSOR (PARTÍCULAS)
+==================================================*/
+
+.cursor-dot{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#FFFDF0,var(--primary) 45%,rgba(255,184,0,.4) 70%,transparent 80%);
+
+    box-shadow:0 0 16px rgba(255,214,10,1),0 0 4px rgba(255,255,255,.8);
+
+    pointer-events:none;
+
+    z-index:99998;
+
+    opacity:.95;
+
+    transform:translate(-50%,-50%);
+
+    animation:trailFade .7s ease forwards;
+
+}
+
+@keyframes trailFade{
+
+    to{
+
+        opacity:0;
+
+        transform:translate(-50%,-50%) scale(.15);
+
+    }
+
+}
+
+/*==================================================
+        TÍTULOS CON DEGRADADO ANIMADO
+==================================================*/
+
+.section-title h2{
+
+    background:linear-gradient(90deg,#fff 0%,var(--primary) 35%,#FFB800 55%,#fff 80%);
+
+    background-size:300% auto;
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:titleShimmer 7s linear infinite;
+
+}
+
+@keyframes titleShimmer{
+
+    0%{ background-position:0% 50%; }
+
+    100%{ background-position:300% 50%; }
+
+}
+
+/*==================================================
+        BOTONES — GLOW PULSANTE EN HOVER
+==================================================*/
+
+.btn-primary:hover,
+.filter-btn:hover,
+.filter-btn.active{
+
+    animation:btnGlowPulse 1.6s ease-in-out infinite;
+
+}
+
+@keyframes btnGlowPulse{
+
+    0%,100%{ box-shadow:0 0 0 rgba(255,214,10,0); }
+
+    50%{ box-shadow:0 0 22px rgba(255,214,10,.55); }
+
+}
+
+/*==================================================
+        TARJETAS — BARRIDO DE BRILLO (SHEEN)
+==================================================*/
+
+.hardware-card,
+.software-card,
+.project-card{
+
+    isolation:isolate;
+
+}
+
+.hardware-card::after,
+.software-card::after,
+.project-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    background:linear-gradient(115deg,transparent 30%,rgba(255,214,10,.14) 50%,transparent 70%);
+
+    transform:translateX(-130%);
+
+    pointer-events:none;
+
+    transition:transform .85s ease;
+
+}
+
+.hardware-card:hover::after,
+.software-card:hover::after,
+.project-card:hover::after{
+
+    transform:translateX(130%);
+
+}
+
+/*==================================================
+        ACCESIBILIDAD — REDUCIR MOVIMIENTO
+==================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .btn-primary:hover,
+    .filter-btn:hover,
+    .filter-btn.active{
+
+        animation:none !important;
+
+    }
+
+}
+
+/*==================================================
+        RESPONSIVE — SUAVIZAR EN MÓVIL
+==================================================*/
+
+@media(max-width:768px){
+
+    .blur-3{
+
+        filter:blur(90px);
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+}
