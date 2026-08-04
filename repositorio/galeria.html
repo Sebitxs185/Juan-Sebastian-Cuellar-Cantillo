@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galería | Sebastian Cuellar</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="galeria.css?v=3">
+
+    <link rel="stylesheet" href="animation.css?v=3">
+
+</head>
+
+<body>
+
+<!-- Fondo dinámico: esferas de luz en movimiento -->
+<div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+</div>
+
+<!-- Estrellas cayendo -->
+<canvas class="stars-canvas" aria-hidden="true"></canvas>
+
+<!-- Barra de progreso de scroll -->
+<div class="scroll-progress"></div>
+
+<!--==========================================
+                HEADER
+===========================================-->
+
+<header class="header">
+
+    <div class="container header-container">
+
+        <a href="index.html" class="logo">
+
+            <img src="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/ICONOSCTRANSPA.png" alt="Sebastian Cuellar">
+
+        </a>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Portafolio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#gallery">
+                        <i class="fa-solid fa-images"></i>
+                        Galería
+                    </a>
+                </li>
+
+        
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>    
+
+<!--==========================================
+                HERO GALLERY
+===========================================-->
+
+<section class="gallery-hero">
+
+    <div class="container">
+
+        <span class="hero-badge">
+
+            <i class="fa-solid fa-palette"></i>
+
+            Galería Creativa
+
+        </span>
+
+        <h1>
+
+            Galería de Diseños
+
+        </h1>
+
+        <p>
+
+            Explora una colección de proyectos de branding, diseño gráfico,
+            contenido para redes sociales, streaming, miniaturas y material
+            publicitario desarrollados con un enfoque moderno y profesional.
+
+        </p>
+
+        
+
+    </div>
+
+</section>
+
+<!--==========================================
+            ESTADÍSTICAS
+===========================================-->
+
+<section class="gallery-stats">
+
+    <div class="container">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-palette"></i>
+
+            <h2>50+</h2>
+
+            <p>Diseños Realizados</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <h2>6</h2>
+
+            <p>Categorías</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h2>3+</h2>
+
+            <p>Años de Experiencia</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h2>100%</h2>
+
+            <p>Compromiso con la Calidad</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+            FILTROS
+===========================================-->
+
+<section class="gallery-filters">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Explora</span>
+
+            <h2>Categorías</h2>
+
+            <p>
+                Selecciona una categoría para visualizar únicamente
+                los proyectos relacionados.
+            </p>
+
+        </div>
+
+        <div class="filter-buttons">
+
+            <button class="filter-btn active" data-filter="all">
+
+                Todos
+
+            </button>
+
+            <button class="filter-btn" data-filter="logos">
+
+                Edits
+
+            </button>
+
+            <button class="filter-btn" data-filter="branding">
+
+                Fotografía
+
+            </button>
+
+            <button class="filter-btn" data-filter="streaming">
+
+                Branding
+
+            </button>
+
+            <button class="filter-btn" data-filter="videos">
+
+                <i class="fa-solid fa-video"></i>
+
+                Videos
+
+            </button>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+                GALERÍA
+===========================================-->
+
+<section class="gallery" id="gallery">
+
+    <div class="container">
+    
+
+        <div class="gallery-grid">
+
+<!-- Proyecto 1 -->
+
+<div class="gallery-item"
+    data-category="logos"
+    data-title="Diseños"
+    data-type="Edits"
+    data-description="Adobe Photoshop • 2026"
+    data-images="
+https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/JAMESPOSTER.jpg,
+https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/POSTERCAMISETA.jpg,
+https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/ADIDASBLUEPOSTER.jpg,
+https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/AFICHEHAMBURGUESAFUEGO.jpg">
+
+    <img src="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/JAMESPOSTER.jpg" alt="Logo">
+
+    <div class="gallery-overlay">
+
+        <span class="project-category">
+
+            Edits
+
+        </span>
+
+        <h3>
+
+            Diseños
+
+        </h3>
+
+        <p>
+
+            Adobe Photoshop • 2026
+
+        </p>
+
+        <a href="#" class="project-btn">
+
+            Ver proyecto
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Proyecto 2 -->
+
+<div class="gallery-item"
+     data-category="branding"
+     data-title="Fotografía"
+     data-type="Estilo variado"
+     data-description="Canon EOS 2000D • 2026"
+     data-images="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/FOTORETRATOALEJO.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/FOTORETRATOLEIDY.jpg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/FOTORETRATONATA2.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/FOTORETRATONATA.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/FOTORETRATOVALEN.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/REVELADA-HORIZONTALVINTAGEPIES.jpg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/REVELADA-HORIZONTALVINTAGESENA.jpg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/REVELADA-HORIZONTALVINTAGESUELO.jpg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/FOTOVINTAGE-CAMERA.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/BORBON.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/ALVARO.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/PLANTA5.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/PLANTA1.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/PLANTA2.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/PLANTA3.jpeg,
+     https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/PLANTA4.jpeg">
+    
+     
+
+    <img src="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/FOTORETRATOALEJO.jpeg" alt="Branding Café">
+
+    <div class="gallery-overlay">
+
+        <span class="project-category">
+            Fotografía
+        </span>
+
+        <h3>
+            Estilo variado
+        </h3>
+
+        <p>
+            Canon EOS 2000D • 2026
+        </p>
+
+        <a href="#" class="project-btn">
+            Ver proyecto
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Proyecto 3 -->
+
+<div class="gallery-item"
+     data-category="streaming"
+     data-title="Branding"
+     data-type="Diseño de Marca"
+     data-description="Adobe Photoshop • 2026 - Adobe Illustrator"
+     data-images="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/DISEOSOLTROPICAL.jpeg">
+
+
+    <img src="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/DISEOSOLTROPICAL.jpeg" alt="Diseño de Marca">
+
+    <div class="gallery-overlay">
+
+        <span class="project-category">
+            Branding
+        </span>
+
+        <h3>
+            Diseño de Marca
+        </h3>
+
+        <p>
+            Adobe Photoshop • 2026 - Adobe Illustrator
+        </p>
+
+        <a href="#" class="project-btn">
+            Ver proyecto
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Proyecto 4 (Video) -->
+
+<div class="gallery-item has-video"
+     data-category="videos"
+     data-title="Edición y Streaming"
+     data-type="Video Edit"
+     data-description="OBS Studio • CapCut • Adobe Premiere Pro • 2026"
+     data-images="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/EDITBODA-DIMENSION.mp4">
+
+    <video class="gallery-item-video" src="https://r2.fivemanage.com/TDq9dc4mhyBtSby4RdbFO/EDITBODA-DIMENSION.mp4" muted loop playsinline preload="metadata"></video>
+
+    <div class="gallery-overlay">
+
+        <span class="project-category">
+            Video Edit
+        </span>
+
+        <h3>
+            Edición y Streaming
+        </h3>
+
+        <p>
+            OBS Studio • CapCut • 2026
+        </p>
+
+        <a href="#" class="project-btn">
+            Ver proyecto
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Proyecto 5 (Video) -->
+
+<div class="gallery-item has-video"
+     data-category="videos"
+     data-title="Edición y Streaming"
+     data-type="Video Edit"
+     data-description="OBS Studio • CapCut • Adobe Premiere Pro • 2026"
+     data-images="assets/videos/demo-edit.mp4">
+
+    <video class="gallery-item-video" src="assets/videos/demo-edit.mp4" muted loop playsinline preload="metadata"></video>
+
+    <div class="gallery-overlay">
+
+        <span class="project-category">
+            Video Edit
+        </span>
+
+        <h3>
+            Edición y Streaming
+        </h3>
+
+        <p>
+            OBS Studio • CapCut • 2026
+        </p>
+
+        <a href="#" class="project-btn">
+            Ver proyecto
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Proyecto 6 (Video) -->
+
+<div class="gallery-item has-video"
+     data-category="videos"
+     data-title="Edición y Streaming"
+     data-type="Video Edit"
+     data-description="OBS Studio • CapCut • Adobe Premiere Pro • 2026"
+     data-images="assets/videos/demo-edit.mp4">
+
+    <video class="gallery-item-video" src="assets/videos/demo-edit.mp4" muted loop playsinline preload="metadata"></video>
+
+    <div class="gallery-overlay">
+
+        <span class="project-category">
+            Video Edit
+        </span>
+
+        <h3>
+            Edición y Streaming
+        </h3>
+
+        <p>
+            OBS Studio • CapCut • 2026
+        </p>
+
+        <a href="#" class="project-btn">
+            Ver proyecto
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section> 
+
+<div class="lightbox">
+
+    <button class="lightbox-back">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        <span>Volver a la galería</span>
+
+    </button>
+
+    <button class="lightbox-close">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <button class="lightbox-prev">
+
+        <i class="fa-solid fa-chevron-left"></i>
+
+    </button>
+
+    <div class="lightbox-content">
+
+        <div class="lightbox-media">
+
+            <div class="lightbox-loader"></div>
+
+            <img src="" class="lightbox-image">
+
+            <video class="lightbox-video" playsinline></video>
+
+            <div class="video-controls">
+
+                <button class="video-play-toggle">
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <div class="video-bottom-bar">
+
+                    <button class="video-mini-toggle">
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                    <span class="video-time video-time-current">0:00</span>
+
+                    <div class="video-progress-wrap">
+
+                        <div class="video-progress-buffer"></div>
+
+                        <div class="video-progress-fill"></div>
+
+                        <input type="range" class="video-progress-seek" min="0" max="100" value="0" step="0.1">
+
+                    </div>
+
+                    <span class="video-time video-time-duration">0:00</span>
+
+                    <button class="video-mute-toggle">
+
+                        <i class="fa-solid fa-volume-high"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <span class="lightbox-counter"></span>
+
+            <span class="lightbox-zoom-hint">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </span>
+
+        </div>
+
+        <div class="lightbox-info">
+
+            <span class="lightbox-category"></span>
+
+            <h2 class="lightbox-title"></h2>
+
+            <p class="lightbox-description"></p>
+
+            <div class="lightbox-thumbs"></div>
+
+        </div>
+
+    </div>
+
+    <button class="lightbox-next">
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+    </button>
+
+</div>
+
+<!--==========================================
+                FOOTER
+===========================================-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+
+            © 2026 Sebastian Cuellar | Todos los derechos reservados.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="galeria.js?v=3"></script>
+
+
+
+</body>
+
+</html>
